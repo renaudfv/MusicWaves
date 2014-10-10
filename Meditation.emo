@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE EML>
+<EML version="1.0" language="en_US">
+  <sequence>
+    <time value ="0s2t">
+      <affectiv event="meditation" value="0.1" />
+      <affectiv event="excitement_short_term" value="1.0" />
+    </time>
+    <time value ="0s6t">
+      <affectiv event="meditation" value="0.2" />
+      <affectiv event="excitement_short_term" value="0.9" />
+    </time>
+    <time value ="0s11t">
+      <affectiv event="meditation" value="0.3" />
+      <affectiv event="excitement_short_term" value="0.8" />
+    </time>
+    <time value ="0s16t">
+      <affectiv event="meditation" value="0.4" />
+      <affectiv event="excitement_short_term" value="0.7" />
+    </time>
+    <time value ="0s18t">
+      <affectiv event="meditation" value="0.5" />
+      <affectiv event="excitement_short_term" value="0.6" />
+    </time>
+    <time value ="0s21t">
+      <affectiv event="meditation" value="0.6" />
+      <affectiv event="excitement_short_term" value="0.5" />
+    </time>
+    <time value ="0s26t">
+      <affectiv event="meditation" value="0.7" />
+      <affectiv event="excitement_short_term" value="0.4" />
+    </time>
+    <time value ="0s30t">
+      <affectiv event="meditation" value="0.8" />
+      <affectiv event="excitement_short_term" value="0.3" />
+    </time>
+    <time value ="1s1t">
+      <affectiv event="meditation" value="0.9" />
+      <affectiv event="excitement_short_term" value="0.2" />
+    </time>
+    <time value ="1s6t">
+      <affectiv event="meditation" value="1.0" />
+      <affectiv event="excitement_short_term" value="0.1" />
+    </time>
+    <time value ="1s10t">
+      <affectiv event="meditation" value="0.9" />
+      <affectiv event="excitement_short_term" value="0.2" />
+    </time>
+    <time value ="1s14t">
+      <affectiv event="meditation" value="0.8" />
+      <affectiv event="excitement_short_term" value="0.3" />
+    </time>
+    <time value ="1s18t">
+      <affectiv event="meditation" value="0.7" />
+      <affectiv event="excitement_short_term" value="0.4" />
+    </time>
+    <time value ="1s22t">
+      <affectiv event="meditation" value="0.6" />
+      <affectiv event="excitement_short_term" value="0.5" />
+    </time>
+    <time value ="1s26t">
+      <affectiv event="meditation" value="0.5" />
+      <affectiv event="excitement_short_term" value="0.6" />
+    </time>
+    <time value ="1s30t">
+      <affectiv event="meditation" value="0.4" />
+      <affectiv event="excitement_short_term" value="0.7" />
+    </time>
+    <time value ="2s1t">
+      <affectiv event="meditation" value="0.3" />
+      <affectiv event="excitement_short_term" value="0.8" />
+    </time>
+    <time value ="2s4t">
+      <affectiv event="meditation" value="0.2" />
+      <affectiv event="excitement_short_term" value="0.9" />
+    </time>
+    <time value ="2s8t">
+      <affectiv event="meditation" value="0.1" />
+      <affectiv event="excitement_short_term" value="1.0" />
+    </time>
+    <time value ="2s12t">
+      <affectiv event="meditation" value="0.0" />
+      <affectiv event="excitement_short_term" value="1.0" />
+    </time>
+
+  </sequence>
+</EML>

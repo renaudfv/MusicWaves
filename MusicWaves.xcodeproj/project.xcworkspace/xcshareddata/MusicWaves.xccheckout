@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6A54EFF3-D1E7-4284-9698-60FC4AD6ECDD</string>
+	<string>2399256D-EEF2-47B8-BBF7-8600081ADA8B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MusicWaves</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E2CFBE3D-58A5-4647-8C21-A068540FD3F8</key>
-		<string>https://github.com/renaudfv/EmoMIDI.git</string>
+		<key>344AE099-9395-4B87-A4DB-8ED0A0A82122</key>
+		<string>https://github.com/renaudfv/MusicWaves.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MusicWaves.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E2CFBE3D-58A5-4647-8C21-A068540FD3F8</key>
+		<key>344AE099-9395-4B87-A4DB-8ED0A0A82122</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/renaudfv/EmoMIDI.git</string>
+	<string>https://github.com/renaudfv/MusicWaves.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E2CFBE3D-58A5-4647-8C21-A068540FD3F8</string>
+	<string>344AE099-9395-4B87-A4DB-8ED0A0A82122</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E2CFBE3D-58A5-4647-8C21-A068540FD3F8</string>
+			<string>344AE099-9395-4B87-A4DB-8ED0A0A82122</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MusicWaves</string>
 		</dict>
