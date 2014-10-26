@@ -25,6 +25,10 @@ int main (int argc, const char * argv[])
         EmoStateHandle eState = EE_EmoStateCreate();
         unsigned int userID = 0;
         const unsigned short composerPort = 1726;
+        
+        //Pour se connecter au Consumer control panel avec le SDK Lite il faut passer par ce port.
+        //EmoEngine ne fonctionne qu'avec le SDK complet.
+        const unsigned short remoteConnectEmoEnginePort = 3008;
         bool connected = FALSE;
         
         NSLog(@"%@", [midi getDeviceList]);
@@ -38,7 +42,7 @@ int main (int argc, const char * argv[])
         switch(option)
         {
             case 1:
-                if(EE_EngineConnect() == EDK_OK) {
+                if(EE_EngineRemoteConnect("127.0.0.1", remoteConnectEmoEnginePort) == EDK_OK) {
                     connected = TRUE;
                     NSLog(@"Connected to the EmoEngine");
                 }
@@ -74,12 +78,17 @@ int main (int argc, const char * argv[])
             NSArray *meditationMIDIData;
             NSArray *excitementMIDIData;
             
+            float excitementScore;
+            
+            EE_Event_t eventType;
+            NSLog(@"Connected");
             while(TRUE)
             {
                 state = EE_EngineGetNextEvent(eEvent);
+                
                 if(state == EDK_OK)
                 {
-                    EE_Event_t eventType = EE_EmoEngineEventGetType(eEvent);
+                    eventType = EE_EmoEngineEventGetType(eEvent);
                     EE_EmoEngineEventGetUserId(eEvent, &userID);
                     
                     if(eventType == EE_EmoStateUpdated)
@@ -87,17 +96,16 @@ int main (int argc, const char * argv[])
                         EE_EmoEngineEventGetEmoState(eEvent, eState);
                         
                         //Data from 0 to 1
-                        float meditationScore = ES_AffectivGetMeditationScore(eState);
-                        float excitementScore = ES_AffectivGetExcitementShortTermScore(eState);
+                        excitementScore = ES_AffectivGetExcitementShortTermScore(eState);
                         
-                        //Meditation sends pitchBend data on channel 0 and Excitement sens pitchBend data on channel 1
-                        meditationMIDIData = [NSArray arrayWithObjects:[NSNumber numberWithUnsignedInt:0xE0 ], [NSNumber numberWithUnsignedInt:0x0C], [NSNumber numberWithUnsignedInt: (meditationScore * 127)],nil];
+                        //Meditation sends pitchBend data on channel 0 and Excitement sends pitchBend data on channel 1
+                        meditationMIDIData = [NSArray arrayWithObjects:[NSNumber numberWithUnsignedInt:0xE0 ], [NSNumber numberWithUnsignedInt:0x0C], [NSNumber numberWithUnsignedInt: (127 - excitementScore * 127)],nil];
                         excitementMIDIData = [NSArray arrayWithObjects:[NSNumber numberWithUnsignedInt:0xE1 ], [NSNumber numberWithUnsignedInt:0x0C], [NSNumber numberWithUnsignedInt: (excitementScore * 127)],nil];
                         
                         [midi sendData:meditationMIDIData withDevice:virtualDevice];
                         [midi sendData:excitementMIDIData withDevice:virtualDevice];
                         
-                    }
+                   }
                     if(eventType == EE_UserAdded)
                         
                     {
